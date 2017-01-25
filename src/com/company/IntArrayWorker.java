@@ -44,7 +44,15 @@ public class IntArrayWorker
     }
     return total;
   }
-  
+  public int getLargest()
+  {
+    int largVal = 0;
+    for(int row=0; row<matrix.length; row++)
+      for(int column=0; column<matrix[0].length; column++)
+        if(matrix[row][column] > largVal)
+          largVal = matrix[row][column];
+    return largVal;}
+
   /**
    * Method to return the total using a nested for-each loop
    * @return the total of the values in the array
@@ -94,7 +102,13 @@ public class IntArrayWorker
     }
     System.out.println();
   }
-  
+  public int getColTotal(int b)
+  {
+    int total = 0;
+    for(int row = 0; row<matrix.length; row++)
+      total = total + matrix[row][b];
+    return total;
+  }
   
   /** 
    * fill the array with a pattern
