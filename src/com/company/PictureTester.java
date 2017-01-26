@@ -2,7 +2,7 @@ package com.company;
 
 /**
  * This class contains class (static) methods
- * that will help you test the Picture class 
+ * that will help you test the com.company.Picture class
  * methods.  Uncomment the methods and the code
  * in the main to test.
  * 
@@ -18,11 +18,12 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
+
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
+    Picture caterpillar = new Picture("imgres.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
@@ -31,7 +32,7 @@ public class PictureTester
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
-    Picture temple = new Picture("temple.jpg");
+    Picture temple = new Picture("imgres.jpg");
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
@@ -40,7 +41,7 @@ public class PictureTester
   /** Method to test the collage method */
   public static void testCollage()
   {
-    Picture canvas = new Picture("640x480.jpg");
+    Picture canvas = new Picture("imgres.jpg");
     canvas.createCollage();
     canvas.explore();
   }
@@ -48,10 +49,36 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("IMG_7275.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }
+  public static void testKeepOnlyBlue(){
+    Picture swan = new Picture("imgres.jpg");
+    swan.explore();
+    swan.keepOnlyBlue();
+    swan.explore();
+  }
+  public static void testNegate(){
+    Picture swan = new Picture("imgres.jpg");
+    swan.explore();
+    swan.negate();
+    swan.explore();
+  }
+  public static void testGrey(){
+    Picture swan = new Picture("imgres.jpg");
+    swan.explore();
+    swan.grey();
+    swan.explore();
+  }
+  public static void testwater(){
+    Picture swan = new Picture("water.jpg");
+    swan.explore();
+    swan.fixUnderwater();
+    swan.explore();
+
+  }
+
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -60,7 +87,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
@@ -72,7 +99,11 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+   // testCollage();
+   //testKeepOnlyBlue();
+   // testNegate();
+   // testGrey();
+    testwater();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
@@ -80,7 +111,8 @@ public class PictureTester
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();
-    //testClearBlueOverValue(200);
-    //testGetAverageForColumn(0);
-  }
+  //testClearBlueOverValue(200);
+  //testGetAverageForColumn(0);
+}
+
 }
